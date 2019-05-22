@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 15:01:54 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/05/22 15:00:02 by fmakgoka         ###   ########.fr       */
+/*   Created: 2019/05/22 14:59:13 by fmakgoka          #+#    #+#             */
+/*   Updated: 2019/05/22 16:05:24 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isascii(int c)
+char	*ft_strcat(char *s1, const char *s2)
 {
-	if (c >= 0 && c <= 127)
+	int i;
+	int j;
+
+	j = 0;
+	i = 0;
+	while (s1[i] != '\0')
 	{
-		return (1);
+		i++;
 	}
-	else
+	while (s1[i] == '\0')
 	{
-		return (0);
+		s1[i] = s2[j];
+		j++;
+		i++;
 	}
+	return (s1);
 }

@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 15:01:54 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/05/22 15:00:02 by fmakgoka         ###   ########.fr       */
+/*   Created: 2019/05/22 13:43:07 by fmakgoka          #+#    #+#             */
+/*   Updated: 2019/05/22 14:55:55 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isascii(int c)
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	if (c >= 0 && c <= 127)
+	size_t i;
+
+	i = 0;
+	while (i < len && src[i] != '\0')
 	{
-		return (1);
+		dst[i] = src[i];
+		i++;
 	}
-	else
-	{
-		return (0);
-	}
+	dst[i] = '\0';
+	return (dst);
 }

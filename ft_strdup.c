@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 15:01:54 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/05/22 15:00:02 by fmakgoka         ###   ########.fr       */
+/*   Created: 2019/05/22 10:49:23 by fmakgoka          #+#    #+#             */
+/*   Updated: 2019/05/22 12:28:05 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isascii(int c)
+char	*ft_strdup(const char *s1)
 {
-	if (c >= 0 && c <= 127)
+	int		i;
+	char	*dest;
+
+	i = 0;
+	dest = (char *)malloc(sizeof(dest) * (i + 1));
+	if (dest == NULL)
 	{
-		return (1);
+		return ((char *)NULL);
 	}
-	else
+	while (s1[i] != '\0')
 	{
-		return (0);
+		dest[i] = s1[i];
+		i++;
 	}
+	dest[i] = '\0';
+	return (dest);
 }
