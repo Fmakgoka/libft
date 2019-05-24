@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 13:43:07 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/05/23 09:21:16 by fmakgoka         ###   ########.fr       */
+/*   Created: 2019/05/24 10:35:53 by fmakgoka          #+#    #+#             */
+/*   Updated: 2019/05/24 14:42:52 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	size_t i;
+	int i;
+	int j;
 
 	i = 0;
-	while (i < len && src[i] != '\0')
+	j = 0;
+	while (haystack[i] != '\0')
 	{
-		dst[i] = src[i];
+		j = 0;
+		if (haystack[i] == needle[j])
+		{
+			while (needle[j] == haystack[i + j])
+			{
+				if (needle[j + 1] == '\0')
+				{
+					return ((char*)(haystack + i));
+				}
+				j++;
+			}
+		}
 		i++;
 	}
-	dst[i] = '\0';
-	return (dst);
+	return (NULL);
 }

@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 13:43:07 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/05/23 09:21:16 by fmakgoka         ###   ########.fr       */
+/*   Created: 2019/05/24 09:40:45 by fmakgoka          #+#    #+#             */
+/*   Updated: 2019/05/24 10:35:21 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t i;
+	int i;
 
 	i = 0;
-	while (i < len && src[i] != '\0')
+	while (s[i] != '\0')
 	{
-		dst[i] = src[i];
 		i++;
 	}
-	dst[i] = '\0';
-	return (dst);
+	i--;
+	while (i >= 0)
+	{
+		if (s[i] == (char)c)
+		{
+			return ((char *)&s[i]);
+		}
+		i--;
+	}
+	return (NULL);
 }
