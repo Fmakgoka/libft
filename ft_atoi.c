@@ -1,33 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 07:17:27 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/05/27 11:13:51 by fmakgoka         ###   ########.fr       */
+/*   Created: 2019/05/27 10:03:35 by fmakgoka          #+#    #+#             */
+/*   Updated: 2019/05/27 10:35:17 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+int		ft_atoi(const char *str)
 {
-	size_t i;
-	size_t j;
+	int i;
+	int nb;
+	int sign;
 
 	i = 0;
-	j = 0;
-	while (s1[i] != '\0')
+	nb = 0;
+	sign = 1;
+	while (str[i] == ' ' || str[i] == '\t')
 	{
 		i++;
 	}
-	while (s1[i] == '\0' && j < n)
+	if (str[i] == '-' || str[i] == '+')
 	{
-		s1[i] = s2[j];
-		j++;
+		if (str[i] == '-')
+		{
+			sign = -1;
+			i++;
+		}
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		nb = 10 * nb + (str[i] - '0');
 		i++;
 	}
-	return (s1);
+	return (nb * sign);
 }

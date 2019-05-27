@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 07:17:27 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/05/27 11:13:51 by fmakgoka         ###   ########.fr       */
+/*   Created: 2019/05/25 05:32:04 by fmakgoka          #+#    #+#             */
+/*   Updated: 2019/05/27 08:01:07 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	size_t i;
-	size_t j;
+	int i;
 
 	i = 0;
-	j = 0;
 	while (s1[i] != '\0')
 	{
+		if (s1[i] != s2[i])
+		{
+			return (s1[i] - s2[i]);
+		}
 		i++;
 	}
-	while (s1[i] == '\0' && j < n)
-	{
-		s1[i] = s2[j];
-		j++;
-		i++;
-	}
-	return (s1);
+	return (0);
 }
