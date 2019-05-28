@@ -5,13 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-<<<<<<< HEAD
 /*   Created: 2019/05/25 05:32:04 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/05/27 08:01:07 by fmakgoka         ###   ########.fr       */
-=======
-/*   Created: 2019/05/24 21:35:06 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/05/27 08:38:11 by fmakgoka         ###   ########.fr       */
->>>>>>> 99406bf1f5ced4f2559411dd50e4b7646e5c9229
+/*   Updated: 2019/05/28 16:31:09 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +25,5 @@ int		ft_strcmp(const char *s1, const char *s2)
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
