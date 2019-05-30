@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 09:40:45 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/05/24 10:35:21 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/05/30 09:13:56 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		i++;
 	}
+	if ((char)c == '\0')
+		return ((char *)&s[i]);
 	i--;
 	while (i >= 0)
 	{

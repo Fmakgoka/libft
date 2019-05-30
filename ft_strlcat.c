@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 15:03:25 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/05/30 10:20:26 by fmakgoka         ###   ########.fr       */
+/*   Created: 2019/05/30 13:20:07 by fmakgoka          #+#    #+#             */
+/*   Updated: 2019/05/30 16:02:54 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	char	*str1;
-	char	*str2;
-	int		i;
+	size_t i;
+	size_t j;
 
-	str1 = dst;
-	str2 = (char *)src;
 	i = 0;
-	while (n--)
+	j = 0;
+	while (dst[i] && i < dstsize)
 	{
-		str1[i] = str2[i];
 		i++;
 	}
-	return (str1);
+	while (src[j] && (i + j + 1) < (dstsize))
+	{
+		dst[i + j] = src[j];
+		j++;
+	}
+	if (i != dstsize)
+	{
+		dst[i + j] = '\0';
+	}
+	return (i + (size_t)ft_strlen(src));
 }

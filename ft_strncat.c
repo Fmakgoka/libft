@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 07:17:27 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/05/27 11:13:51 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/05/30 09:06:42 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 	{
 		i++;
 	}
-	while (s1[i] == '\0' && j < n)
+	while (s2[j] != '\0' && j < n)
 	{
-		s1[i] = s2[j];
+		s1[i + j] = s2[j];
 		j++;
-		i++;
 	}
+	s1[i + j] = '\0';
 	return (s1);
 }

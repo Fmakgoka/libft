@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 13:52:20 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/05/27 14:36:41 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/05/29 14:51:59 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(str, 0, n);
+	ft_memset(s, 0, n);
 }

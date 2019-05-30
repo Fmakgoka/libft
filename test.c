@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 15:03:25 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/05/30 10:20:26 by fmakgoka         ###   ########.fr       */
+/*   Created: 2019/05/29 15:56:15 by fmakgoka          #+#    #+#             */
+/*   Updated: 2019/05/29 15:59:19 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+int	main()
 {
-	char	*str1;
-	char	*str2;
-	int		i;
+	char c[] = "Hello";
 
-	str1 = dst;
-	str2 = (char *)src;
-	i = 0;
-	while (n--)
-	{
-		str1[i] = str2[i];
-		i++;
-	}
-	return (str1);
+	printf("The string length size is %ld", ft_strlen(c));
+	return (0);
 }
