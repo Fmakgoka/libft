@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 12:59:01 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/05/27 11:31:31 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/05/31 12:47:58 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		{
 			if (needle[j + 1] == '\0')
 			{
-				return ((char *)haystack + i);
+				return ((unsigned char *)haystack + i);
 			}
 			j++;
 		}

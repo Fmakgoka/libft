@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 15:03:25 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/05/30 10:20:26 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/05/31 11:30:51 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,15 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 	str1 = dst;
 	str2 = (char *)src;
 	i = 0;
-	while (n--)
+	if (n == 0 || dst == src)
+	{
+		return (dst);
+	}
+	while (--n)
 	{
 		str1[i] = str2[i];
 		i++;
 	}
-	return (str1);
+	str1[i] = str2[i];
+	return (dst);
 }
