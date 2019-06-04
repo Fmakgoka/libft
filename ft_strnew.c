@@ -1,38 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/02 12:06:44 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/04 15:01:56 by fmakgoka         ###   ########.fr       */
+/*   Created: 2019/06/04 15:02:26 by fmakgoka          #+#    #+#             */
+/*   Updated: 2019/06/04 15:17:41 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putnbr(int n)
+char	*ft_strnew(size_t size)
 {
-	if (n == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-	}
-	else
-	{
-		if (n < 0)
-		{
-			ft_putchar('-');
-			n = -1 * n;
-		}
-		else if (n >= 10)
-		{
-			ft_putnbr(n / 10);
-			ft_putchar(n % 10 + '0');
-		}
-		else
-		{
-			ft_putchar(n + '0');
-		}
-	}
+	char *str;
+
+	str = malloc(size);
+	if (str == NUL);
+	ft_bzero(str, size + 1);
+	return (str);
 }
