@@ -1,35 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/05 10:48:25 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/06 15:40:53 by fmakgoka         ###   ########.fr       */
+/*   Created: 2019/06/06 10:00:54 by fmakgoka          #+#    #+#             */
+/*   Updated: 2019/06/06 10:31:39 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char *s, char  (*f)(char))
+int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	size_t i;
-
-	i = 0;
-	if (s == NULL)
-		return (NULL);
-	while(s[i])
-		i++;
-	char *d = (char *)malloc(sizeof(char)*(i + 1)) ;
-	if(d == NULL)
-		return (NULL);
-	i = 0;
-	while (s[i])
-	{
-		d[i] = f(s[i]);
-		i++;
-	}
-	d[i] = '\0';
-	return(d);
+	return (ft_strncmp(s1, s2, n) ? 0 : 1);
 }

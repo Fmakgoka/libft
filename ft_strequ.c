@@ -1,35 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/05 10:48:25 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/06 15:40:53 by fmakgoka         ###   ########.fr       */
+/*   Created: 2019/06/06 09:10:13 by fmakgoka          #+#    #+#             */
+/*   Updated: 2019/06/06 15:46:39 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char *s, char  (*f)(char))
+int		ft_strequ(char const *s1, char const *s2)
 {
-	size_t i;
-
-	i = 0;
-	if (s == NULL)
-		return (NULL);
-	while(s[i])
-		i++;
-	char *d = (char *)malloc(sizeof(char)*(i + 1)) ;
-	if(d == NULL)
-		return (NULL);
-	i = 0;
-	while (s[i])
-	{
-		d[i] = f(s[i]);
-		i++;
-	}
-	d[i] = '\0';
-	return(d);
+	if (!s1 && !s2)
+		return (0);
+	return (ft_strcmp(s1, s2) ? 0 :1 );
 }

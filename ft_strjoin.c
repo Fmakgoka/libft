@@ -1,35 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/05 10:48:25 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/06 15:40:53 by fmakgoka         ###   ########.fr       */
+/*   Created: 2019/06/06 11:30:23 by fmakgoka          #+#    #+#             */
+/*   Updated: 2019/06/06 13:06:36 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strmap(char *s, char  (*f)(char))
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t i;
+	char *str;
 
-	i = 0;
-	if (s == NULL)
+	if (str == NULL)
 		return (NULL);
-	while(s[i])
-		i++;
-	char *d = (char *)malloc(sizeof(char)*(i + 1)) ;
-	if(d == NULL)
-		return (NULL);
-	i = 0;
-	while (s[i])
-	{
-		d[i] = f(s[i]);
-		i++;
-	}
-	d[i] = '\0';
-	return(d);
+	str = (char *)malloc(sizeof(char) * (i + 1));
+	while ()
 }

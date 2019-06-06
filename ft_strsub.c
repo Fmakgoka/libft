@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/05 10:48:25 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/06 15:40:53 by fmakgoka         ###   ########.fr       */
+/*   Created: 2019/06/06 10:38:52 by fmakgoka          #+#    #+#             */
+/*   Updated: 2019/06/06 15:51:07 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char *s, char  (*f)(char))
+char *ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	size_t i;
-
-	i = 0;
-	if (s == NULL)
-		return (NULL);
-	while(s[i])
-		i++;
-	char *d = (char *)malloc(sizeof(char)*(i + 1)) ;
-	if(d == NULL)
+	char	*str;
+	int		i;
+	
+	str = (char *)malloc(sizeof(char)*(len + 1));
+	if (str == NULL || s == NULL)
 		return (NULL);
 	i = 0;
-	while (s[i])
+	while (i < len)
 	{
-		d[i] = f(s[i]);
-		i++;
+		  str[i] = s[start];
+		  i++;
+		  start++;
 	}
-	d[i] = '\0';
-	return(d);
+	str[i] = '\0';
+	return (str);
 }

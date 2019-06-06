@@ -6,13 +6,15 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 09:45:22 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/05 10:48:03 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/06/06 15:16:27 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int = i;
+	unsigned int i;
 
 	i = 0;
 	while (s[i] != '\0')
