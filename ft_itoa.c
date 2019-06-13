@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 10:52:15 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/08 12:21:17 by fmakgoka         ###   ########.fr       */
+/*   Created: 2019/06/12 12:22:55 by fmakgoka          #+#    #+#             */
+/*   Updated: 2019/06/12 15:19:16 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_itoa(int c)
 {
-	unsigned char	*str1;
-	unsigned char	*str2;
-	size_t	i;
+	char *str;
+	int nb;
 
-	str1 = (unsigned char *)dst;
-	str2 = (unsigned char *)src;
-	i = len;
-	if (str2 < str1)
+	nb = 0;
+	str = (char *)malloc(sizeof(char)*());
+	if (str == NULL)
+		return (NULL);
+	if (c < 0)
 	{
-		while (i--)
-		{
-			str1[i] = str2[i];
-		}
+		str[0] = '-';
+		str[1] = '\n';
 	}
-	else
-	{
-		dst = ft_memcpy(str1, str2, len);
-	}
-	return (dst);
 }
