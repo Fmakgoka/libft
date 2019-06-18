@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 14:33:40 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/10 10:31:26 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/06/18 11:39:27 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strtrim(char const *s)
 	int		size;
 	int		x;
 
-	i = 0;
+	i = ft_strlen(s) - 1;
 	j = 0;
 	if (!s)
 		return (NULL);

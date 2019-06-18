@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 09:34:45 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/05/30 09:59:14 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/06/18 10:59:03 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,23 @@
 
 int		ft_atoi(const char *str)
 {
-	int i;
-	int nb;
-	int sign;
+	long	i;
+	int		num;
 
 	i = 0;
-	nb = 0;
-	sign = 1;
-	while ((str[i] == ' ') || (str[i] == '\t')
-			|| (str[i] == '\v') || (str[i] == '\n')
-			|| (str[i] == '\r') || (str[i] == '\f'))
-	{
-		i++;
-	}
-	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-		{
-			sign = -1;
-			i++;
-		}
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		nb = 10 * nb + (str[i] - '0');
-		i++;
-	}
-	return (nb * sign);
+	while ((*str >= '\t' && *str <= '\r') || (*str == 32))
+		str++;
+	if (*str == '-')
+		num = -1;
+	else
+		num = 1;
+	if (*str == '-' || *str == '+')
+		str++;
+	while (*str >= '0' && *str <= '9')
+		i = (i * 10) + (*str++ - '0');
+	if (i < 0 && num == 1)
+		return (-1);
+	if (i < 0)
+		return (0);
+	return (i * num);
 }
