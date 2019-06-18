@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 14:33:40 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/18 11:39:27 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/06/18 15:02:14 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,7 @@ char	*ft_strtrim(char const *s)
 	x = 0;
 	while (j <= i)
 	{
-		str[x] = s[j];
-		j++;
-		x++;
+		str[x++] = s[j++];
 	}
 	str[size] = '\0';
 	return (str);

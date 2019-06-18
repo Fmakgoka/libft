@@ -6,23 +6,24 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 10:48:25 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/06 15:40:53 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/06/18 13:46:17 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char *s, char  (*f)(char))
+char	*ft_strmap(char *s, char (*f)(char))
 {
-	size_t i;
+	size_t	i;
+	char	*d;
 
 	i = 0;
 	if (s == NULL)
 		return (NULL);
-	while(s[i])
+	while (s[i])
 		i++;
-	char *d = (char *)malloc(sizeof(char)*(i + 1)) ;
-	if(d == NULL)
+	d = (char *)malloc(sizeof(char) * (i + 1));
+	if (d == NULL)
 		return (NULL);
 	i = 0;
 	while (s[i])
@@ -31,5 +32,5 @@ char	*ft_strmap(char *s, char  (*f)(char))
 		i++;
 	}
 	d[i] = '\0';
-	return(d);
+	return (d);
 }

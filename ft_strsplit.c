@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 10:45:34 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/11 17:03:15 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/06/18 14:12:06 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ char	**ft_strsplit(char const *s, char c)
 				i++;
 			}
 			if (s[i] != c && s[i] != '\0')
-			{
 				j = 0;
 				while (s[i + j] != c && s[i + j] != '\0')
 				{
@@ -71,19 +70,9 @@ char	**ft_strsplit(char const *s, char c)
 					i++;
 				}
 				str[ctr][j] = '\0';
-			}
 			ctr++;
 		}
 		return (str);
 	}
 	return (NULL);
-}
-#include <stdio.h>
-int		main()
-{
-	char *s = "split  ||this|for|me|||||!|";
-	char c = '|';
-	printf("%i\n", ft_counter(s, c));
-
-	return (0);
 }
