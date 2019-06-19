@@ -6,7 +6,7 @@
 #    By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/29 14:32:47 by fmakgoka          #+#    #+#              #
-#    Updated: 2019/06/13 13:00:35 by fmakgoka         ###   ########.fr        #
+#    Updated: 2019/06/19 09:20:26 by fmakgoka         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,15 +29,13 @@ OBJECTS = ft_toupper.o ft_tolower.o ft_isalpha.o ft_isdigit.o ft_isalnum.o \
 		  ft_memdel.o ft_strnew.o ft_strdel.o ft_strclr.o ft_striter.o ft_striteri.o ft_strmap.o\
 		  ft_strmapi.o ft_strequ.o ft_strnequ.o ft_strsub.o ft_strjoin.o ft_strtrim.o\
 		  ft_strsplit.o ft_itoa.o
-HEADERS = includes
 
-CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 
-all: make_lib
+all: $(NAME)
 
-make_lib:
-	gcc -I $(HEADERS) -c $(SRC)
+$(NAME):
+	gcc -c $(CFLAGS) $(SRC)
 	ar -rv $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 

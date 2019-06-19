@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 13:43:07 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/18 09:55:57 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/06/19 09:19:15 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 		dst[j] = src[j];
 		j++;
 	}
-	while (j < len)
+	while ((size_t)j < len)
 		dst[j++] = '\0';
 	return (dst);
 }
