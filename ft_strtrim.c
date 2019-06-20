@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmahloko <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 14:33:40 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/19 13:33:43 by mmahloko         ###   ########.fr       */
+/*   Updated: 2019/06/20 16:07:25 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ char	*ft_strtrim(char const *s)
 
 	if (!s)
 		return (NULL);
-	end = ft_strlen(s) - 1;
 	start = 0;
+	end = ft_strlen(s) - 1;
 	while (((s[start] == '\n') || (s[start] == ' ') || (s[start] == '\t') ||\
 	(s[start] == '\v')) && s[start] != '\0')
 		start++;
@@ -31,10 +31,9 @@ char	*ft_strtrim(char const *s)
 	(s[end] == '\v')) && end >= 0)
 		end--;
 	size = end - start + 1;
-	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))
-		return (NULL);
+	str = (char*)malloc(sizeof(char) * size);
 	x = 0;
-	while (end <= start)
+	while (start <= end)
 		str[x++] = s[start++];
 	str[size] = '\0';
 	return (str);
