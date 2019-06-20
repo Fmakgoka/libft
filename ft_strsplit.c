@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmahloko <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 10:45:34 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/19 13:46:51 by mmahloko         ###   ########.fr       */
+/*   Updated: 2019/06/20 16:14:26 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,5 @@ char	**ft_strsplit(char const *s, char c)
 		str[ctr][j] = '\0';
 		ctr++;
 	}
-return (str);
+	return (str);
 }
