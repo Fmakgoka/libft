@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 09:58:14 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/07 08:41:48 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/06/20 17:14:21 by llanga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlen(const char *str)
 	int i;
 
 	i = 0;
+	if (!str)
+		return (-1);
 	while (str[i] != '\0')
 	{
 		i++;
