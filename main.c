@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/21 10:17:21 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/21 10:40:48 by fmakgoka         ###   ########.fr       */
+/*   Created: 2019/06/20 09:16:19 by fmakgoka          #+#    #+#             */
+/*   Updated: 2019/06/20 09:18:44 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+int		main(int c, char **v)
 {
-	char	*str;
-	int		i;
+	if (c != 2)
+		return (0);
+	printf("%s\n", ft_strtrim(v[1]));
+	return (0);
 
-	str = (char *)malloc(sizeof(char) * (len + 1));
-	if (str == NULL || s == NULL || start > ft_strlen(s) || len > ft_strlen(s))
-		return (NULL);
-	i = 0;
-	while ((size_t)i < len)
-	{
-		str[i] = s[start];
-		i++;
-		start++;
-	}
-	str[i] = '\0';
-	return (str);
 }
