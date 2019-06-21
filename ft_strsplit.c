@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 10:45:34 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/21 12:25:25 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/06/21 15:58:25 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,7 @@ char	**ft_strsplit(char const *s, char c)
 		j = 0;
 		while (s[i] != c && s[i] != '\0')
 		{
-			str[ctr][j] = s[i];
-			j++;
-			i++;
+			str[ctr][j++] = s[i++];
 		}
 		str[ctr][j] = '\0';
 		ctr++;

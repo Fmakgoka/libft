@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 14:33:40 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/21 12:25:34 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/06/21 17:05:59 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,15 @@ char	*ft_strtrim(char const *s)
 		return (NULL);
 	start = 0;
 	end = ft_strlen(s) - 1;
-	while (((s[start] == '\n') || (s[start] == ' ') || (s[start] == '\t') ||\
-	(s[start] == '\v')) && s[start] != '\0')
+	while (((s[start] == '\t') || (s[start] == '\n') || (s[start] == ' ') ||\
+	(s[start] == '\v'))&& s[start] != '\0')
 		start++;
 	while (((s[end] == '\n') || (s[end] == '\t') || (s[end] == ' ') ||\
 	(s[end] == '\v')) && end >= 0)
 		end--;
 	size = end - start + 1;
-	if (!(str = (char*)malloc(sizeof(char) * size)))
-		return ;
+	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))
+		return (NULL);
 	x = 0;
 	while (start <= end)
 		str[x++] = s[start++];
