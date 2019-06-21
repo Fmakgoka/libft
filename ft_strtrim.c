@@ -5,8 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
+<<<<<<< HEAD
 /*   Created: 2019/06/21 10:07:42 by fmakgoka          #+#    #+#             */
 /*   Updated: 2019/06/21 10:09:28 by fmakgoka         ###   ########.fr       */
+=======
+/*   Created: 2019/06/07 14:33:40 by fmakgoka          #+#    #+#             */
+/*   Updated: 2019/06/20 16:15:45 by fmakgoka         ###   ########.fr       */
+>>>>>>> 85d9b44dc3af71967eb5f6ee88e2624f8caf463f
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +37,11 @@ char	*ft_strtrim(char const *s)
 		end--;
 	size = end - start + 1;
 	if (!(str = (char*)malloc(sizeof(char) * size)))
+<<<<<<< HEAD
 		return (NULL);
+=======
+		return ;
+>>>>>>> 85d9b44dc3af71967eb5f6ee88e2624f8caf463f
 	x = 0;
 	while (start <= end)
 		str[x++] = s[start++];
