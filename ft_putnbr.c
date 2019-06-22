@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/02 12:06:44 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/22 09:20:43 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/06/22 10:33:49 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,12 @@ void	ft_putnbr(int n)
 		{
 			ft_putchar('-');
 			n = -1 * n;
+			ft_putnbr(n);
 		}
 		else if (n >= 10)
 		{
 			ft_putnbr(n / 10);
-			ft_putchar(n % 10 + '0');
+			ft_putnbr(n % 10);
 		}
 		else
 		{
