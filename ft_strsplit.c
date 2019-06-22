@@ -6,7 +6,7 @@
 /*   By: fmakgoka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 10:45:34 by fmakgoka          #+#    #+#             */
-/*   Updated: 2019/06/22 05:27:51 by fmakgoka         ###   ########.fr       */
+/*   Updated: 2019/06/22 09:12:48 by fmakgoka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,7 @@ char				**ft_strsplit(char const *s, char c)
 	i = 0;
 	start = 0;
 	ctr = 0;
-	if (!s)
-		return (NULL);
-	if (!(str = (char **)malloc(sizeof(char *) * (ft_counter(s, c) + 1))))
+	if (!s || !(str = (char **)malloc(sizeof(char *) * (ft_counter(s, c) + 1))))
 		return (NULL);
 	while (s[i] != '\0')
 	{
